@@ -1,3 +1,5 @@
 @import 'tailwindcss';
+@import '@toolwind/anchors';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+@plugin 'daisyui';
