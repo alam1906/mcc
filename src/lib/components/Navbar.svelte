@@ -10,7 +10,7 @@
 	let isOpen = $state(true);
 </script>
 
-<div class={`sticky top-0 w-full bg-white ${isOpen ? '' : 'shadow-md'}`}>
+<div class={`sticky top-0 z-50 w-full bg-white ${isOpen ? '' : 'shadow-md'}`}>
 	<div class="mx-auto max-w-6xl">
 		<div class="mx-5">
 			<div class="flex h-20 items-center justify-between">
