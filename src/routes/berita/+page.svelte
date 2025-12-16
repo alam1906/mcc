@@ -2,11 +2,16 @@
 	import { news } from "$lib/data/news";
 </script>
 
+<svelte:head>
+	<title>Manonjaya Chess Club</title>
+	<meta name="description" content="Manonjaya chess club MCC" />
+</svelte:head>
+
 <div>
-    <div class="py-20 max-w-6xl mx-auto ">
+    <div class="py-10 max-w-6xl mx-auto ">
         <div class="mx-5">
             <!-- title -->
-            <div class="text-center text-2xl font-semibold   mb-20">Berita </div>
+            <div class="text-center text-2xl font-semibold mb-10">Berita </div>
 
             <!-- content news -->
              <div class="grid min-[450px]:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mb-10">
@@ -27,7 +32,6 @@
                             </div>
                     </div>
                 {/each}
-
              </div> 
         </div>
      </div>

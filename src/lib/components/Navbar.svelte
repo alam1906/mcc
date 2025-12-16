@@ -31,6 +31,7 @@
 
 				<!-- trigger button -->
 				<button
+				aria-label="menu-button"
 					onclick={() => {
 						isOpen = !isOpen;
 					}}

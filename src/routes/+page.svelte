@@ -1,6 +1,11 @@
 <script lang="ts">
 </script>
 
+<svelte:head>
+	<title>Manonjaya Chess Club</title>
+	<meta name="description" content="Manonjaya chess club MCC" />
+</svelte:head>
+
 <div>
     {@render banner()}
     {@render aboutUs()}
@@ -9,7 +14,7 @@
 
 {#snippet banner()}
     <div class="h-[calc(100dvh-80px)]">
-        <img src="banner.avif" alt="banner" class="h-full w-full brightness-75 object-cover sm:object-fill">
+        <img src="banner.avif" alt="banner" fetchpriority="high" class="h-full w-full brightness-75 object-cover sm:object-fill">
     </div>
 {/snippet}
 
@@ -51,7 +56,7 @@
                 {#each Array(4) as news}
                     <div class="flex flex-col bg-white rounded-md cursor-pointer">
                         <!-- image -->
-                        <img src="banner.avif" alt="banner" class="rounded-t-md">
+                        <img src="banner.avif" alt="banner" class="rounded-t-md aspect-video">
 
                         <!-- content -->
                             <div class="p-2">

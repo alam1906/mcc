@@ -2,6 +2,11 @@
 
 </script>
 
+<svelte:head>
+	<title>Manonjaya Chess Club</title>
+	<meta name="description" content="Manonjaya chess club MCC" />
+</svelte:head>
+
 <div>
     <div class="max-w-6xl mx-auto">
         <div class="mx-5">
@@ -22,7 +27,7 @@
                     <label for="message">message</label>
                     <textarea name="message" id="message" class="rounded-md min-h-32"></textarea>
                 </div>
-                <button class="w-full bg-blue-600 text-white py-2 cursor-pointer rounded-md">Kirim</button>
+                <button aria-label="submit-form" class="w-full bg-blue-600 text-white py-2 cursor-pointer rounded-md">Kirim</button>
             </div>
         </div>
     </div>
