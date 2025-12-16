@@ -15,10 +15,11 @@
 		<div class="mx-5">
 			<div class="flex h-20 items-center justify-between">
 				<!-- logo -->
-				<div class="font-serif text-2xl font-semibold">MCC</div>
+				<div class="font-serif text-xl font-semibold max-[450px]:hidden">MANONJAYA CHESS CLUB</div>
+				<div class="font-serif text-xl font-semibold max-[450px]:block hidden">MCC</div>
 
 				<!-- navbar desktop -->
-				<div class="hidden items-center gap-x-10 sm:flex">
+				<div class="hidden items-center gap-x-10 md:flex">
 					{#each menus as item}
 						<a
 							href={item.path}
@@ -33,7 +34,7 @@
 					onclick={() => {
 						isOpen = !isOpen;
 					}}
-					class="cursor-pointer sm:hidden"
+					class="cursor-pointer md:hidden"
 				>
 					{#if isOpen && desktop}
 						<X />
@@ -48,7 +49,7 @@
 	{#if isOpen}
 		<div
 			transition:slide={{ duration: 300 }}
-			class="absolute top-20 w-full bg-white shadow-md sm:hidden"
+			class="absolute top-20 w-full bg-white shadow-md md:hidden"
 		>
 			<div class="flex w-full flex-col items-center justify-center">
 				{#each menus as item}
