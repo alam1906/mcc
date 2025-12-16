@@ -1,7 +1,5 @@
 <script lang='ts'>
 	import { news } from "$lib/data/news";
-
-
 </script>
 
 <div>
@@ -15,7 +13,7 @@
                 {#each news as item}
                     <div class="flex flex-col bg-white rounded-md cursor-pointer">
                         <!-- image -->
-                        <img src="banner.avif" alt="banner" class="rounded-t-md">
+                        <img src="banner.avif" alt="banner" class="object-cover aspect-video rounded-t-md">
 
                         <!-- content -->
                             <div class="p-2">

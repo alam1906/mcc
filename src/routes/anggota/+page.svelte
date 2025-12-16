@@ -10,7 +10,9 @@
             {#each members as item}
                 <div class="w-full bg-white  pb-2 rounded-md">
                     <!-- image -->
-                    <img src="profile.avif" alt="profile.avif" class="aspect-3/4 object-cover rounded-t-md">
+                    <div class="aspect-3/4">
+                        <img src="profile.avif" alt="profile.avif" class="w-full h-full object-cover rounded-t-md"> 
+                    </div>
                     <!-- description -->
                     <div>
                         <div class="text-center font-semibold text-lg">{item.name}</div>
