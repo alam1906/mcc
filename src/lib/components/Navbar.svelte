@@ -7,7 +7,7 @@
 
 	const desktop = $derived(new MediaQuery('max-width: 640px').current);
 
-	let isOpen = $state(true);
+	let isOpen = $state(false);
 </script>
 
 <div class={`sticky top-0 z-50 w-full bg-white ${isOpen ? '' : 'shadow-md'}`}>
@@ -54,6 +54,7 @@
 			<div class="flex w-full flex-col items-center justify-center">
 				{#each menus as item}
 					<a
+					onclick={()=>{isOpen = !isOpen}}
 						href={item.path}
 						class={`w-full py-5 text-center font-semibold ${page.url.pathname === item.path ? 'text-blue-600' : ''}`}
 						>{item.name}</a

@@ -9,7 +9,7 @@
 
 {#snippet banner()}
     <div class="h-[calc(100dvh-80px)]">
-        <img src="banner.avif" alt="banner" class="h-full w-full brightness-50">
+        <img src="banner.avif" alt="banner" class="h-full w-full brightness-75 object-cover sm:object-fill">
     </div>
 {/snippet}
 
