@@ -43,15 +43,15 @@ import {MapPin, Phone, Mail, Instagram, Facebook, Youtube} from '@lucide/svelte'
                 <div class="text-2xl font-semibold md:mb-5 mb-3">Social Media</div>
                 <!-- content -->
                 <div class="space-y-5">
-                    <div class="flex gap-x-2 items-center ">
+                    <div class="flex gap-x-2 items-center cursor-pointer">
                         <Instagram size="20"/>
                         <div>Instagram</div>
                     </div>
-                    <div class="flex gap-x-2 items-center ">
+                    <div class="flex gap-x-2 items-center cursor-pointer">
                         <Facebook size="20"/>
                         <div>Facebook</div>
                     </div>
-                    <div class="flex gap-x-2 items-center ">
+                    <div class="flex gap-x-2 items-center cursor-pointer">
                         <Youtube size="20"/>
                         <div>Youtube</div>
                     </div>

@@ -7,5 +7,8 @@ export const members =  [
     {id : 6, name : 'Kepi Sumaryono', role : 'anggota'},
     {id : 7, name : 'Nur Alam', role : 'anggota'},
     {id : 8, name : 'Apep Saripudin', role : 'anggota'},
+    {id : 9, name : 'Ejen Junaedi', role : 'anggota'},
+    {id : 10, name : 'Ade Herman Maulana', role : 'anggota'},
+
 
 ]
