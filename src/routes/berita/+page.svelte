@@ -1,4 +1,5 @@
 <script lang='ts'>
+	import { getNews } from "$lib/api/news";
 	import { news } from "$lib/data/news";
 </script>
 
@@ -15,7 +16,8 @@
 
             <!-- content news -->
              <div class="grid min-[450px]:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mb-10">
-                {#each news as item}
+                <svelte:boundary>
+                    {#each await getNews() as item}
                     <div class="flex flex-col bg-white rounded-md cursor-pointer">
                         <!-- image -->
                         <img src="banner.avif" alt="banner" class="object-cover aspect-video rounded-t-md">
@@ -31,7 +33,12 @@
                                 </div>
                             </div>
                     </div>
-                {/each}
+                    {/each}
+
+                    {#snippet pending()}
+                        <div class="">Loading...</div>
+                    {/snippet}
+                </svelte:boundary>
              </div> 
         </div>
      </div>

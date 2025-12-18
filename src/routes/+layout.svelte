@@ -6,12 +6,6 @@
 	let { children } = $props();
 </script>
 
-<header>
-	<Navbar />
-</header>
-<main>
-	{@render children()}
-</main>
-<footer>
-	<Footer/>
-</footer>
+<Navbar />
+{@render children()}
+<Footer/>

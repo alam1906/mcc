@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { getNews } from '$lib/api/news';
 </script>
 
 <svelte:head>
@@ -53,23 +54,29 @@
 
             <!-- content news -->
              <div class="grid min-[450px]:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mb-10">
-                {#each Array(4) as news}
+                <svelte:boundary>
+                    {#each await getNews() as item}
                     <div class="flex flex-col bg-white rounded-md cursor-pointer">
                         <!-- image -->
-                        <img src="banner.avif" alt="banner" class="rounded-t-md aspect-video">
+                        <img src="banner.avif" alt="banner" class="object-cover aspect-video rounded-t-md">
 
                         <!-- content -->
                             <div class="p-2">
                                 <!-- title -->
-                                <div class="line-clamp-3 text-lg font-semibold mt-0.5 mb-1">Manonjaya Chess Club kembali mengadakan turnamen untuk merayakan kemerdekaan Indonesia</div>
+                                <div class="line-clamp-3 text-lg font-semibold mt-0.5 mb-1">{item.title}</div>
                                 <!-- date -->
                                 <div class="flex justify-between">
-                                    <div class="text-gray-600 text-sm font-medium">10 Oktober 2020</div>
+                                    <div class="text-gray-600 text-sm font-medium">{item.date}</div>
                                     <div class="text-gray-600 text-sm font-medium">admin</div>
                                 </div>
                             </div>
                     </div>
-                {/each}
+                    {/each}
+
+                    {#snippet pending()}
+                        <div class="">Loading...</div>
+                    {/snippet}
+                </svelte:boundary>
 
              </div> 
         </div>
